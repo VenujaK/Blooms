@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +17,7 @@
 body {
     background-image: url("../Images/Untitled\ design\ \(47\).png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-attachment: local;
 }
 
@@ -29,6 +31,10 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
     background: var(--main-color);
+}
+
+.btn {
+    border: none;
 }
 
 
@@ -58,7 +64,7 @@ html::-webkit-scrollbar-thumb {
     text-align: center;
     margin-right: 15px;
     font-weight: 700;
-    color: #9e9c9c;
+    color: #b3b0b0;
     text-decoration: none;
 }
 
@@ -86,8 +92,51 @@ nav {
     align-items: center;
 }
 
-.hero {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+.hero img {
+    position: relative;
+    top: 110px;
+    width: max-content;
+    height: 600px;
+}
+
+.hero h2 {
+    color: var(--main-color);
+    font-family: 'Send Flowers', cursive;
+    font-weight: 700;
+    position: relative;
+    top: 110px;
+    font-size: 250%;
+}
+
+.herodes p {
+    color: var(--main-color);
+    font-family: 'Chivo Mono', monospace;
+    position: relative;
+    top: 110px;
+    padding: 50px;
+    font-size: large;
+}
+
+.herodes button {
+    position: relative;
+    top: 80px;
+}
+
+.abtcontent h2 {
+    color: var(--main-color);
+    font-family: 'Send Flowers', cursive;
+    font-weight: 700;
+    font-size: 250%;
+    text-align: left;
+    position: relative;
+    top: 30px;
+}
+
+.abtcontent p {
+    color: var(--main-color);
+    font-family: 'Chivo Mono', monospace;
+    text-align: left;
+    float: left;
+    padding: 50px;
+    font-size: large;
 }
