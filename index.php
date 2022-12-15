@@ -13,28 +13,7 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-4 nav-logo">
-                        <img src="./Images/BOOMS.png" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-7 nav-content ">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Flowers</a></li>
-                            <li><a href="#">Pre Order</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">About Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col nav-icons ">
-                        <a href="#"><i class="fa-solid fa-user"" style="color: #54A232; "></i> </a>
-                    </div>
-                </div>
-        </nav>
-    </header>
+    <?php @include('./Components/Header.php'); ?>
     <!-- Hero Section -->
     <div class="container text-center">
         <div class="row">
@@ -69,20 +48,7 @@
     </div>
     <!-- About Us Section end-->
     <!-- Footer -->
-    <div class="footer-basic">
-        <footer>
-            <div class="social"><a href="https://www.instagram.com"><i class="icon ion-social-instagram"></i></a><a href="https://www.snapchat.com/"><i class="icon ion-social-snapchat"></i></a><a href="https://twitter.com"><i class="icon ion-social-twitter"></i></a>
-                <a href="https://www.facebook.com"><i class="icon ion-social-facebook"></i></a>
-            </div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Home</a></li>
-                <li class="list-inline-item"><a href="#">Flowers</a></li>
-                <li class="list-inline-item"><a href="#">Contat Us</a></li>
-                <li class="list-inline-item"><a href="#">About Us</a></li>
-            </ul>
-            <p class="copyright">Blooms &copy; 2022</p>
-        </footer>
-    </div>
+    <?php @include('./Components/Footer.php'); ?>
 </body>
 
 </html>

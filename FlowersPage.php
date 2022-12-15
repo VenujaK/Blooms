@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<?php @include('./Components/Header.php'); ?>
     <div class="row row-cols-1 row-cols-md-4 g-4 px-4">
         <div class="col">
             <div class="card">
@@ -51,6 +52,7 @@
             </div>
         </div>
     </div>
+    <?php @include('./Components/Footer.php'); ?>
 </body>
 
 </html>
