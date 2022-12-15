@@ -21,6 +21,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                     <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
                 </div>
             </div>
         </div>
@@ -30,6 +31,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a short card.</p>
+                    <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
                 </div>
             </div>
         </div>
@@ -39,6 +41,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
                 </div>
             </div>
         </div>
@@ -48,6 +51,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
                 </div>
             </div>
         </div>

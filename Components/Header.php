@@ -56,6 +56,7 @@
 nav {
     background-color: none;
     align-items: center;
+    text-align: center;
 }
 </style>
 <header>
