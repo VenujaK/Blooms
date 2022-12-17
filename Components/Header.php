@@ -63,14 +63,14 @@ nav {
         <nav>
             <div class="container text-center">
                 <div class="row">
-                    <div class="col-4 nav-logo">
+                    <div class="col nav-logo">
                         <img src="./Images/BOOMS.png" class="img-fluid" alt="">
                     </div>
                     <div class="col-7 nav-content ">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Flowers</a></li>
-                            <li><a href="#">Pre Order</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="FlowersPage.php">Flowers</a></li>
+                            <li><a href="Specials.php">Specials</a></li>
                             <li><a href="#">Contact</a></li>
                             <li><a href="#">About Us</a></li>
                         </ul>

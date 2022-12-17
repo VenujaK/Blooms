@@ -16,7 +16,7 @@
 <?php @include('./Components/Header.php'); ?>
     <div class="row row-cols-1 row-cols-md-4 g-4 px-4">
         <div class="col">
-            <div class="card">
+            <div class="card h-100">
                 <img src="./Images/BOOMS (9).png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card">
+            <div class="card h-100">
                 <img src="./Images/BOOMS (10).png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="col">
-            <div class="card">
+            <div class="card h-100">
                 <img src="./Images/BOOMS (12).png" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
