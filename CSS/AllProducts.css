@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+}
+
+:root {
+    --main-color: #54A232;
+    --text-color: #9e9c9c;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+    accent-color: #54A232;
+    font-family: 'Inter', sans-serif;
+}
+
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+table {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    text-align: left;
+}
+
+thead {
+    background-color: #f3f3f3;
+    border-radius: 8px 8px 0px 0px;
+}
+
+thead>tr {
+    border-radius: 8px 8px 0px 0px;
+    font-weight: bold;
+    color: black;
+}
+
+tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border: 1px solid #e1e1e1;
+    margin-top: -1px;
+    color: #535353;
+}
+
+tbody tr:hover {
+    background-color: #f6f6f6;
+}
+
+.first {
+    width: 32px;
+}
+
+.second {
+    min-width: 18%;
+    align-items: left;
+}
+
+.third {
+    width: 24%;
+}
+
+.fourth {
+    width: 120px;
+}
+
+.fifth {
+    width: 60px;
+    text-align: right;
+}
+
+.sixth {
+    width: 32px;
+}
