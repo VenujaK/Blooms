@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/AllProducts.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 <body>
+<?php @include('./Components/Header.php'); ?>
 <table>
   
   <thead>
     <tr>
       <th class="first"> </th>
       <th class="second">Name</th>
-      <th class="third">Email</th>
-      <th class="fourth">Phone</th>
-      <th class="fifth">Revenue</th>
+      <th class="third">Details</th>
+      <th class="fourth">Category</th>
+      <th class="fifth">Price</th>
       
     </tr>
   </thead>
@@ -97,5 +101,6 @@
   </tbody>
 
 </table>
+<?php @include('./Components/Footer.php'); ?>
 </body>
 </html>

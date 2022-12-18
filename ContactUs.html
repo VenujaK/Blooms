@@ -1,0 +1,81 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <style>
+        /* CSS */
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F2F2F2;
+        }
+        
+        header {
+            background-color: #54A232;
+            color: #FFFFFF;
+            padding: 20
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        form {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        form {
+            background-color: #F9F9F9;
+        }
+        
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            background-color: #FFF;
+            border: 1px solid #CCC;
+            color: #333;
+        }
+        
+        form input[type="submit"] {
+            background-color: #54A232;
+            border: none;
+            color: #FFF;
+        }
+        
+        @media (max-width: 480px) {
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <section>
+        <h2>Get in touch</h2>
+        <p>We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+        <!-- HTML -->
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+            <br>
+            <input type="submit" value="Send">
+        </form>
+
+    </section>
+    <footer>
+        <p>Copyright 2021</p>
+    </footer>
+</body>
+
+</html>

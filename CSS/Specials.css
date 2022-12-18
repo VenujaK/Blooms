@@ -25,3 +25,75 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
     background: var(--main-color);
 }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2;
+    padding-top: 60px;
+}
+
+nav .container .row {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 2px 16px;
+}
+
+.card-title {
+    font-size: 22px;
+    text-align: left;
+    color: #54A232;
+}
+
+.card-text {
+    font-size: 14px;
+    text-align: left;
+    color: #333333;
+}
+
+.abtbtn {
+    width: 120px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.abtbtn:hover {
+    background-color: #54A232;
+    color: #FFFFFF;
+}
