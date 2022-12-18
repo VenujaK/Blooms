@@ -1,81 +1,57 @@
-<!-- HTML -->
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 
 <head>
-    <title>Contact Us</title>
-    <style>
-        /* CSS */
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F2F2F2;
-        }
-        
-        header {
-            background-color: #54A232;
-            color: #FFFFFF;
-            padding: 20
-        }
-        
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-        form {
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        form {
-            background-color: #F9F9F9;
-        }
-        
-        form input[type="text"],
-        form input[type="email"],
-        form textarea {
-            background-color: #FFF;
-            border: 1px solid #CCC;
-            color: #333;
-        }
-        
-        form input[type="submit"] {
-            background-color: #54A232;
-            border: none;
-            color: #FFF;
-        }
-        
-        @media (max-width: 480px) {
-            form {
-                width: 90%;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title> Contact Us </title>
+    <link rel="stylesheet" href="./CSS/ContactUs.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <header>
-        <h1>Contact Us</h1>
-    </header>
-    <section>
-        <h2>Get in touch</h2>
-        <p>We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
-        <!-- HTML -->
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
-            <br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Enter your message"></textarea>
-            <br>
-            <input type="submit" value="Send">
-        </form>
+    <div class="container">
+        <div class="content">
+            <div class="left-side">
+                <div class="address details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="topic">Address</div>
+                    <div class="text-one">Surkhet, NP12</div>
+                    <div class="text-two">Birendranagar 06</div>
+                </div>
+                <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">Phone</div>
+                    <div class="text-one">+947612345615</div>
+                </div>
+                <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">Email</div>
+                    <div class="text-one">blooms@gmail.com</div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="topic-text">Send us a message</div>
+                <p>If you have any questions or need help with your order, please don't hesitate to contact us. You can reach us by phone, email, or by filling out the contact form on our website. Our team is available Monday through Saturday to assist you
+                    with any inquiries you may have. We look forward to helping you find the perfect flowers for any occasion. Thank you for choosing our flower shop</p>
+                <form action="#">
+                    <div class="input-box">
+                        <input type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Enter your email">
+                    </div>
+                    <div class="input-box message-box">
 
-    </section>
-    <footer>
-        <p>Copyright 2021</p>
-    </footer>
+                    </div>
+                    <div class="button">
+                        <input type="button" value="Send Now">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
