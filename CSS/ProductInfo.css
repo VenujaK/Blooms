@@ -7,6 +7,23 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+:root {
+    --main-color: #54A232;
+    --text-color: #9e9c9c;
+}
+
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
 .text {
     color: #555;
     text-align: center;
@@ -54,7 +71,7 @@ h3 {
     padding: 5px 5px;
     font-weight: 400;
     color: white;
-    background-color: #f04545;
+    background-color: #0b8819;
     opacity: 1;
     transition: 0.3s all;
 }
@@ -67,6 +84,11 @@ h3 {
     margin: auto;
     padding: 0px 25px;
     color: #555454;
+}
+
+.ff {
+    margin: 0 auto;
+    text-align: center;
 }
 
 .col-4 {
@@ -87,7 +109,7 @@ h3 {
     font-size: 14px;
 }
 
-.small-container h1 {
+.small-container {
     text-align: center;
     margin: 50px 0px;
 }
@@ -116,66 +138,32 @@ h3 {
     font-size: 120%;
 }
 
-
-/* Footer */
-
-.footer-basic {
-    padding: 40px 0;
-    background-color: #ffffff;
-    color: #555454;
+.small-container .row {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
-.footer-basic ul {
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.6;
-    margin-bottom: 0;
+.small-container .row .col4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
 }
 
-.footer-basic li {
-    padding: 0 10px;
+.small-container .row .col4 {
+    flex: 0 0 50%;
 }
 
-.footer-basic ul a {
-    color: inherit;
-    text-decoration: none;
-    opacity: 0.8;
+@media (max-width: 767px) {
+    .small-container .row {
+        flex-wrap: wrap;
+    }
+    .small-container .row .col4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
-.footer-basic ul a:hover {
-    opacity: 1;
-}
-
-.footer-basic .social {
-    text-align: center;
-    padding-bottom: 25px;
-}
-
-.footer-basic .social>a {
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    margin: 0 8px;
-    color: inherit;
-    opacity: 0.75;
-}
-
-.footer-basic .social>a:hover {
-    opacity: 0.9;
-}
-
-.footer-basic .copyright {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 13px;
-    color: #aaa;
-    margin-bottom: 0;
+@media (max-width: 767px) {
+    .small-container {
+        justify-content: flex-start;
+    }
 }

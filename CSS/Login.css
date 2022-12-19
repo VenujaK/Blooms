@@ -17,6 +17,23 @@ body {
     background-attachment: local;
 }
 
+:root {
+    --main-color: #54A232;
+    --text-color: #9e9c9c;
+}
+
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
 .container {
     position: relative;
     left: -80px;

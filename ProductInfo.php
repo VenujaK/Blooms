@@ -19,7 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" hrf="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+<style>
+    .gg{
+        margin: auto;
+        padding-left: 100px;
+    }
+</style>
 </head>
 
 <body>
@@ -87,11 +92,11 @@ if (isset($_POST["add_to_cart_btn"])) {
     </div>
     </section>
    <!-- related products -->
-   <form method="POST">
-        <div class="small-container">
+   <form method="POST" class="gg">
+        <div class="small-container" align="center">
             <h1 class="headings">RECENT PRODUCTS</h1>
 
-            <div class="row">
+            <div class="row ff">
         <?php
                 $sql = "SELECT * FROM `item` ORDER by rand() LIMIT 3";
                 if ($result = mysqli_query($conn, $sql)) {

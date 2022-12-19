@@ -20,6 +20,23 @@ body {
     justify-content: center;
 }
 
+:root {
+    --main-color: #54A232;
+    --text-color: #9e9c9c;
+}
+
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
 .container {
     width: 85%;
     background: rgba(255, 255, 255, 0.401);
