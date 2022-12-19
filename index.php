@@ -25,13 +25,13 @@
             </div>
             <div class="col herodes">
                 <p> we offer a wide selection of fresh flowers and plants, perfect for any occasion. Our team of experienced florists carefully curates our collection to bring you the most beautiful blooms and greenery available.</p>
-                <button type="button" class="btn btn-success" style="background-color:#54A232;border: none; width: 150px;font-family: 'Chivo Mono', monospace;">Explore</button>
+                <button type="button" class="btn btn-success" onclick="window.location.replace('./FlowersPage.php')" style="background-color:#54A232;border: none; width: 150px;font-family: 'Chivo Mono', monospace;">Explore</button>
             </div>
         </div>
     </div>
     <!-- Hero section end -->
     <!-- About Us Section -->
-    <div class="container text-center">
+    <div class="container text-center" id="about">
         <div class="row">
             <div class="col">
                 <img src="./Images/BOOMS (7).png" alt="">
@@ -40,7 +40,7 @@
                 <h2 class="abthead">About Us</h2>
                 <p>We are a family-owned business that has been providing high-quality flowers and plants to our customers for over 25 years. Our mission is to make it easy and convenient for you to find the perfect flowers for any occasion, whether it's
                     a special event or just to brighten up your home. We offer a wide selection of fresh flowers and plants, as well as custom arrangements and delivery services.</p>
-                <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 150px;font-family: 'Chivo Mono', monospace; float: left; ">Contact Us</button>
+                <button type="button" onclick="window.location.replace('./ContactUs.html')" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 150px;font-family: 'Chivo Mono', monospace; float: left; ">Contact Us</button>
 
             </div>
 

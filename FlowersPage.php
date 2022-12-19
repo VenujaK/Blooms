@@ -30,7 +30,7 @@
                       echo ' <h5 class="card-title">' . $row['NAME'] . '</h5>';
                       echo '<p class="card-text">' . $row['NAME'] . ' </p>';
                       echo '<p class="card-text">for ' . $row['PRICE'] . '/= </p>';
-                      echo ' <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: "Chivo Mono", monospace; float: left; ">Purchase</button>';
+                      echo ' <button type="button" class="btn btn-success abtbtn" onclick="loadProduct(' . $row['ID'] . ')" style="background-color:#54A232;border: none; width: 120px;font-family: "Chivo Mono", monospace; float: left; ">Purchase</button>';
                       echo ' </div>';
                       echo '</div>';
                       echo '</div>';
@@ -44,5 +44,16 @@
     </div>
     <?php @include('./Components/Footer.php'); ?>
 </body>
+<script>
+    productID = $productID;
+    // to transfer the product id via url
+    function loadProduct(productID) {
+        // console.log(productID);
+        var origin = window.location.origin;
+        window.location.href = origin + "/Blooms/ProductInfo.php?product_id=" + productID;
 
+        // console.log(origin);
+
+    }
+</script>
 </html>

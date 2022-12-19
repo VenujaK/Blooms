@@ -74,10 +74,10 @@
                 <a href="https://www.facebook.com"><i class="icon ion-social-facebook"></i></a>
             </div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Home</a></li>
-                <li class="list-inline-item"><a href="#">Flowers</a></li>
-                <li class="list-inline-item"><a href="#">Contat Us</a></li>
-                <li class="list-inline-item"><a href="#">About Us</a></li>
+                <li class="list-inline-item"><a href="../Blooms/index.php">Home</a></li>
+                <li class="list-inline-item"><a href="../Blooms/FlowersPage.php">Flowers</a></li>
+                <li class="list-inline-item"><a href="../Blooms/ContactUs.html">Contat Us</a></li>
+                <li class="list-inline-item"><a href="../Blooms/Login.html">Admin</a></li>
             </ul>
             <p class="copyright">Blooms &copy; 2022</p>
         </footer>
