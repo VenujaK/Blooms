@@ -94,11 +94,11 @@ if (isset($_POST["add_to_cart_btn"])) {
    <!-- related products -->
    <form method="POST" class="gg">
         <div class="small-container" align="center">
-            <h1 class="headings">RECENT PRODUCTS</h1>
+            <h1 class="headings">Recent Items</h1>
 
             <div class="row ff">
         <?php
-                $sql = "SELECT * FROM `item` ORDER by rand() LIMIT 3";
+                $sql = "SELECT * FROM `item` WHERE CAT='Flower' ORDER by rand() LIMIT 3";
                 if ($result = mysqli_query($conn, $sql)) {
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_array($result)) {

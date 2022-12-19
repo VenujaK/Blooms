@@ -16,49 +16,35 @@
 <body>
   <?php include './Components/Header.php';
   include 'Config.php';
-  $select = mysqli_query($conn, "SELECT * FROM item ");
+  $select = mysqli_query($conn, "SELECT * FROM ordertbl ");
 
-  // Delete option
-  if (isset($_POST['del'])) {
-    $id = $_POST['del'];
-    $result = mysqli_query($conn, "DELETE FROM item WHERE ID = $id");
-
-    if ($result) {
-      mysqli_query($conn, "ALTER TABLE item AUTO_INCREMENT = 1");
-      header('location:AllProducts.php');
-    } else {
-      // the DELETE query failed, display an error message
-      echo 'Error deleting item: ' . mysqli_error($conn);
-    }
-  }
+ 
   ?>
   <table>
     <thead>
       <tr>
-        <th class="first">IMG</th>
-        <th class="first">ID</th>
-        <th class="second">Name</th>
-        <th class="third">Category</th>
-        <th class="fourth">Details</th>
-        <th class="fifth">Price</th>
-        <th class="fifth">Actions</th>
+        
+        <th class="first">Customer</th>
+        <th class="second">Contact</th>
+        <th class="third">Postal Code</th>
+        <th class="fourth">Address</th>
+        <th class="fifth">Product ID</th>
+        <th class="fifth">User ID</th>
+        <th class="fifth">Quantity</th>
       </tr>
     </thead>
     <tbody>
       <?php while ($row = mysqli_fetch_assoc($select)) { ?>
         <tr>
-          <td class="first"><?php echo "<img src='./uploaded_img/{$row['IMG']}' width='50'>" ?></td>
-          <td class="second"><?php echo $row['ID']; ?></td>
-          <td class="third"><?php echo $row['NAME']; ?></td>
-          <td class="third"><?php echo $row['CAT']; ?></td>
-          <td class="fifth"><?php echo substr($row['DES'], 0, 20); ?>..</td>
-          <td class="fourth"><?php echo $row['PRICE']; ?></td>
-          <td class="fourth">
-            <form method="post">
-              <input type="hidden" name="del" value="<?php echo $row['ID']; ?>">
-              <input type="submit" class="btn-delete" value="Delete" >
-            </form>
-          </td>
+         
+          <td class="second"><?php echo $row['CNAME']; ?></td>
+          <td class="third"><?php echo $row['CONTACT']; ?></td>
+          <td class="third"><?php echo $row['POSTAL']; ?></td>
+          <td class="third"><?php echo $row['ADDRESS']; ?></td>
+          <td class="fourth"><?php echo $row['ProductID']; ?></td>
+          <td class="fourth"><?php echo $row['UserID']; ?></td>
+          <td class="fourth"><?php echo $row['Quantity']; ?></td>
+          
         </tr>
       <?php } ?>
     </tbody>
