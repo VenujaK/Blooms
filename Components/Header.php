@@ -59,6 +59,15 @@ nav {
     text-align: center;
 }
 </style>
+<?php
+session_start();
+$isUserLogged = false;
+if (isset($_SESSION['username'])) {
+    $isUserLogged = true;
+}
+
+include('config.php');
+?>
 <header>
         <nav>
             <div class="container text-center">
@@ -76,8 +85,14 @@ nav {
                         </ul>
                     </div>
                     <div class="col nav-icons ">
-                        <a href="#"><i class="fa-solid fa-user"" style="color: #54A232; "></i> </a>
+                        <?php
+                            if ($isUserLogged) {
+                                echo '<a href="./logout.php"><i class="fa fa-sign-out" style="color: #54A232;"></i></a>';
+                            } else {
+                                echo '<a href="./UserLogin.php"><i class="fa-solid fa-user" style="color: #54A232;"></i></a>';
+                            }
+                        ?>
                     </div>
-                </div>
+                </div
         </nav>
     </header>
