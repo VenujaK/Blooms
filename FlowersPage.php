@@ -13,48 +13,34 @@
 </head>
 
 <body>
-<?php @include('./Components/Header.php'); ?>
+    <?php @include('./Components/Header.php');
+    @include('config.php');
+    $db = ''; ?>
     <div class="row row-cols-1 row-cols-md-4 g-4 px-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="./Images/BOOMS (9).png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                     <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="./Images/BOOMS (10).png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a short card.</p>
-                    <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="./Images/BOOMS (11).png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="./Images/BOOMS (12).png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
-                </div>
-            </div>
-        </div>
+    <?php
+              try {
+                $sql = "SELECT * FROM `item` WHERE CAT='Flower' ORDER by rand() LIMIT 24  ";
+                if ($result = mysqli_query($conn, $sql)) {
+                  if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_array($result)) {
+                      echo '<div class="col">';
+                      echo '<div class="card h-100">';
+                      echo ' <img src="./uploaded_img/' . $row['IMG'] . '" class="card-img-top" alt="...">';
+                      echo ' <div class="card-body">';
+                      echo ' <h5 class="card-title">' . $row['NAME'] . '</h5>';
+                      echo '<p class="card-text">' . $row['NAME'] . ' </p>';
+                      echo '<p class="card-text">for ' . $row['PRICE'] . '/= </p>';
+                      echo ' <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: "Chivo Mono", monospace; float: left; ">Purchase</button>';
+                      echo ' </div>';
+                      echo '</div>';
+                      echo '</div>';
+                    }
+                  }
+                }
+              } catch (Exception $e) {
+                echo 'An error occurred: ' . $e->getMessage();
+              }
+        ?>
     </div>
     <?php @include('./Components/Footer.php'); ?>
 </body>

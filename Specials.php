@@ -13,82 +13,46 @@
 </head>
 
 <body>
-  <?php @include('./Components/Header.php'); ?>
+  <?php @include('./Components/Header.php');
+  @include('config.php');
+  $db = ''; ?>
 
   <div class="container text-center">
     <div class="row row-cols-2">
       <!-- col -->
-      <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./Images/BOOMS (2).png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body text-start">
-                <h5 class="card-title" style="color: #54A232; font-weight: bold;">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <?php
+       try {
+      $sql = "SELECT * FROM `item` WHERE CAT='Special' ORDER by rand() LIMIT 24  ";
+      if ($result = mysqli_query($conn, $sql)) {
+        if (mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_array($result)) {
+            echo '<div class="col">';
+            echo '<div class="card mb-3" style="max-width: 540px;">';
+            echo '<div class="row g-0">';
+            echo '<div class="col-md-4">';
+            echo '<img src="./uploaded_img/' . $row['IMG'] . '" class="img-fluid rounded-start" alt="...">';
+            echo '</div>';
+            echo '<div class="col-md-8">';
+            echo '<div class="card-body text-start">';
+            echo '<h5 class="card-title" style="color: #54A232; font-weight: bold;">' . $row['NAME'] . '</h5>';
+            echo '<p class="card-text">' . $row['DES'] . '</p>';
+            echo '<button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: "Chivo Mono", monospace; float: left; ">Purchase</button>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+          }
+        }
+      }
+    } catch (Exception $e) {
+      echo 'An error occurred: ' . $e->getMessage();
+    }
+      ?>
       <!-- col ends here -->
-      <!-- col -->
-      <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./Images/BOOMS (2).png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body text-start">
-                <h5 class="card-title" style="color: #54A232; font-weight: bold;">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- col ends here -->
-       <!-- col -->
-       <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./Images/BOOMS (2).png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body text-start">
-                <h5 class="card-title" style="color: #54A232; font-weight: bold;">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- col ends here -->
-       <!-- col -->
-       <div class="col">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="./Images/BOOMS (2).png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body text-start">
-                <h5 class="card-title" style="color: #54A232; font-weight: bold;">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: 'Chivo Mono', monospace; float: left; ">Purchase</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- col ends here -->
-    </div></div>
+
+    </div>
+  </div>
 </body>
+
 </html>
