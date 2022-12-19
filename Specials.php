@@ -36,7 +36,7 @@
             echo '<div class="card-body text-start">';
             echo '<h5 class="card-title" style="color: #54A232; font-weight: bold;">' . $row['NAME'] . '</h5>';
             echo '<p class="card-text">' . $row['DES'] . '</p>';
-            echo '<button type="button" class="btn btn-success abtbtn" style="background-color:#54A232;border: none; width: 120px;font-family: "Chivo Mono", monospace; float: left; ">Purchase</button>';
+            echo '<button type="button" class="btn btn-success abtbtn" onclick="loadProduct(' . $row['ID'] . ')" style="background-color:#54A232;border: none; width: 120px;font-family: "Chivo Mono", monospace; float: left; ">Purchase</button>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
