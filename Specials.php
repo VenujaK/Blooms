@@ -54,5 +54,16 @@
     </div>
   </div>
 </body>
+<script>
+    productID = $productID;
+    // to transfer the product id via url
+    function loadProduct(productID) {
+        // console.log(productID);
+        var origin = window.location.origin;
+        window.location.href = origin + "/Blooms/ProductInfo.php?product_id=" + productID;
 
+        // console.log(origin);
+
+    }
+</script>
 </html>
