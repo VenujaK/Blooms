@@ -53,6 +53,7 @@
 
     </div>
   </div>
+  <?php include './Components/Footer.php';?>
 </body>
 <script>
     productID = $productID;

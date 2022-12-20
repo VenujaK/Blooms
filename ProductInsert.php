@@ -4,34 +4,36 @@
 
 // Product insert
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-   $product_name = mysqli_real_escape_string($conn, isset($_POST['product_name']) ? $_POST['product_name'] : '');
-   $product_price = mysqli_real_escape_string($conn, isset($_POST['product_price']) ? $_POST['product_price'] : '');
-   $product_des = mysqli_real_escape_string($conn, isset($_POST['product_des']) ? $_POST['product_des'] : '');
-   $product_cat = mysqli_real_escape_string($conn, isset($_POST['product_cat']) ? $_POST['product_cat'] : 'Flower');
-  $product_image1 = isset($_FILES['product_image1']['name']) ? $_FILES['product_image1']['name'] : '';
-  $product_image_tmp_name1 = isset($_FILES['product_image1']['tmp_name']) ? $_FILES['product_image1']['tmp_name'] : '';
-  $product_image_folder1 = 'uploaded_img/' . $product_image1;
+  // Check if the update_product form field is set
+  if (!isset($_POST['update_product'])) {
+    // Only execute the INSERT query if the update_product form field is not set
+    $product_name = mysqli_real_escape_string($conn, isset($_POST['product_name']) ? $_POST['product_name'] : '');
+    $product_price = mysqli_real_escape_string($conn, isset($_POST['product_price']) ? $_POST['product_price'] : '');
+    $product_des = mysqli_real_escape_string($conn, isset($_POST['product_des']) ? $_POST['product_des'] : '');
+    $product_cat = mysqli_real_escape_string($conn, isset($_POST['product_cat']) ? $_POST['product_cat'] : 'Flower');
+    $product_image1 = isset($_FILES['product_image1']['name']) ? $_FILES['product_image1']['name'] : '';
+    $product_image_tmp_name1 = isset($_FILES['product_image1']['tmp_name']) ? $_FILES['product_image1']['tmp_name'] : '';
+    $product_image_folder1 = 'uploaded_img/' . $product_image1;
 
-  if (empty($product_name) || empty($product_price) || empty($product_des) || empty($product_cat) || empty($product_image1)) {
-    $message[] = 'please fill out all';
-  } else {
-    try {
-      $insert = "INSERT INTO item (CAT, NAME, PRICE,IMG, DES) VALUES('$product_cat', '$product_name','$product_price','$product_image1','$product_des')";
-      $upload = mysqli_query($conn, $insert);
-      if ($upload) {
-        move_uploaded_file($product_image_tmp_name1, $product_image_folder1);
-        $message[] = 'new product added successfully';
-      } else {
-        throw new Exception(mysqli_error($conn));
+    if (empty($product_name) || empty($product_price) || empty($product_des) || empty($product_cat) || empty($product_image1)) {
+      $message[] = 'please fill out all';
+    } else {
+      try {
+        $insert = "INSERT INTO item (CAT, NAME, PRICE,IMG, DES) VALUES('$product_cat', '$product_name','$product_price','$product_image1','$product_des')";
+        $upload = mysqli_query($conn, $insert);
+        if ($upload) {
+          move_uploaded_file($product_image_tmp_name1, $product_image_folder1);
+          $message[] = 'new product added successfully';
+        } else {
+          throw new Exception(mysqli_error($conn));
+        }
+      } catch (Exception $e) {
+        $error = $e->getMessage();
+        $message[] = "Could not add the product: $error";
       }
-    } catch (Exception $e) {
-      $error = $e->getMessage();
-      $message[] = "Could not add the product: $error";
     }
   }
 }
-
-?><?php
 
 if(isset($_POST['update_product'])){
   $product_id = htmlspecialchars($_POST['product_id']);
@@ -48,11 +50,12 @@ if(isset($_POST['update_product'])){
   } else {
 
       $update_data = "UPDATE item SET NAME='$product_name', PRICE='$product_price', DES='$product_des',CAT='$product_cat', IMG='$product_image1'  WHERE ID = '$product_id'";
-      $upload = mysqli_query($conn, $update_data);
+      $upload1 = mysqli_query($conn, $update_data);
       // echo $update_data;
 
-      if($upload){
+      if($upload1){
          move_uploaded_file($product_image_tmp_name1, $product_image_folder1);
+         $message[] = 'new product added successfully';
          header('location:ProductInsert.php');
       }else{
          $message[] = 'Something went Wrong!'; 
@@ -60,6 +63,7 @@ if(isset($_POST['update_product'])){
 
    }
 };
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,7 +86,7 @@ if(isset($_POST['update_product'])){
         </select>
       </fieldset>
       <fieldset>
-        <input placeholder="Item ID" name="product_id" type="text" tabindex="1" required autofocus ">
+        <input placeholder="Item ID" name="product_id" type="text" tabindex="1"  autofocus ">
       </fieldset>
       <fieldset>
         <input placeholder="Item Name" name="product_name" type="text" tabindex="1" required autofocus ">

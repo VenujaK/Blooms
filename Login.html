@@ -36,64 +36,68 @@
 </body>
 <script>
     var objPeople = [{
-            username: "admin",
-            password: "1234"
-        }, {
-            username: "admin2",
-            password: "1234"
-        }, {
-            username: "admin3",
-            password: "1234"
-        }
-
-    ]
+        username: "admin",
+        password: "1234"
+    }, {
+        username: "admin2",
+        password: "1234"
+    }, {
+        username: "admin3",
+        password: "1234"
+    }];
 
     function login(url) {
         console.log("Login successful!");
         window.open("ProductInsert.php");
     }
 
-
     function getInfo() {
-        var username = document.getElementById('txtUser').value
-        var password = document.getElementById('txtPassword').value
+        var username = document.getElementById('txtUser').value;
+        var password = document.getElementById('txtPassword').value;
 
         for (var i = 0; i < objPeople.length; i++) {
-
             if (username == objPeople[i].username && password == objPeople[i].password) {
-                console.log(username + " is logged in!!!")
+                console.log(username + " is logged in!!!");
                 login();
-                return
+                return;
             }
         }
-        console.log("incorrect username or password")
+        // Display error message if login is unsuccessful
+        console.log("incorrect username or password");
+        alert("Incorrect username or password. Please try again.");
     }
+
     document.getElementById("viewall").onclick = function() {
-        var username = document.getElementById('txtUser').value
-        var password = document.getElementById('txtPassword').value
+        var username = document.getElementById('txtUser').value;
+        var password = document.getElementById('txtPassword').value;
 
         for (var i = 0; i < objPeople.length; i++) {
             if (username == objPeople[i].username && password == objPeople[i].password) {
-                console.log(username + " is logged in!!!")
+                console.log(username + " is logged in!!!");
                 window.open("AllProducts.php");
                 return;
             }
         }
+        // Display error message if login is unsuccessful
         console.log("incorrect username or password");
-    }
+        alert("Incorrect username or password. Please try again.");
+    };
+
     document.getElementById("allorders").onclick = function() {
-        var username = document.getElementById('txtUser').value
-        var password = document.getElementById('txtPassword').value
+        var username = document.getElementById('txtUser').value;
+        var password = document.getElementById('txtPassword').value;
 
         for (var i = 0; i < objPeople.length; i++) {
             if (username == objPeople[i].username && password == objPeople[i].password) {
-                console.log(username + " is logged in!!!")
+                console.log(username + " is logged in!!!");
                 window.open("AllOrders.php");
                 return;
             }
         }
+        // Display error message if login is unsuccessful
         console.log("incorrect username or password");
-    }
+        alert("Incorrect username or password. Please try again.");
+    };
 </script>
 
 </html>
