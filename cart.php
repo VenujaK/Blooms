@@ -20,19 +20,20 @@ $user_id =  $_SESSION['user_id'];
 <head>
   <title>Product Cart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./CSS/AllProducts.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   <style>
-    .tbl{
+    /* .tbl{
       background-color: #54A232;
       color: white;
       text-align: center;
       border: none;
-    }
-    body {
+    } */
+    /* body {
     min-height: 100vh;
     width: 100%;
     background-image: url(./Images/Untitled\ design\ \(47\).png);
@@ -41,7 +42,7 @@ $user_id =  $_SESSION['user_id'];
     background-attachment: local;
     display: flex;
     
-}
+} */
   </style>
 </head>
 <?php
@@ -69,13 +70,13 @@ if (isset($_GET['remove'])) {
         <table class="table table-bordered">
           <thead class="tbl">
             <tr>
-              <th scope="col">No</th>
-              <th scope="col">Image</th>
-              <th scope="col">Name</th>
-              <th scope="col">Price</th>
-              <th scope="col">QTY</th>
-              <th scope="col">Total </th>
-              <th scope="col">Actions</th>
+              <th scope="col" class="first">No</th>
+              <th scope="col" class="second">Image</th>
+              <th scope="col" class="third">Name</th>
+              <th scope="col" class="third">Price</th>
+              <th scope="col" class="fifth">QTY</th>
+              <th scope="col" class="fourth">Total </th>
+              <th scope="col" class="fourth">Actions</th>
             </tr>
 
           </thead>
@@ -91,13 +92,13 @@ if (isset($_GET['remove'])) {
 
                   echo "<form method =POST>";
                   echo "<tr>";
-                  echo "<td>" . $row['ID'] . "</td>";
-                  echo "<td scope='row'> <img src='./uploaded_img/{$row['IMG']}' width='50'></td>";
-                  echo "<td>" . $row['NAME'] . "</td>";
-                  echo "<td>" . $row['PRICE'] . "</td>";
-                  echo "<td>" . $row['qty'] . "</td>";
-                  echo "<td>" . $row['qty'] * $row['PRICE'] . "</td>";
-                  echo "<td ><a href='cart.php?remove=$row[id]' class='btn btn-success btn-sm' name='remove' >Remove</a></td>";
+                  echo "<td class='first'>" . $row['ID'] . "</td>";
+                  echo "<td scope='row' class='second'> <img src='./uploaded_img/{$row['IMG']}' width='50'></td>";
+                  echo "<td class='third'>" . $row['NAME'] . "</td>";
+                  echo "<td class='third'>" . $row['PRICE'] . "</td>";
+                  echo "<td class='fifth'>" . $row['qty'] . "</td>";
+                  echo "<td class='fourth'>" . $row['qty'] * $row['PRICE'] . "</td>";
+                  echo "<td class='fourth' ><a href='cart.php?remove=$row[id]' class='btn btn-success btn-sm' name='remove' >Remove</a></td>";
                   echo "</tr>";
                   echo "</form>";
                 }

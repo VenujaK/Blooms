@@ -23,6 +23,7 @@
         mysqli_query($conn, "INSERT INTO ordertbl (UserID,ProductID,Quantity,CNAME,ADDRESS,POSTAL,CONTACT) SELECT  user_id, pid , qty, '$name', '$address', '$province', '$no' FROM cart");
         mysqli_query($conn, "ALTER TABLE ordertbl AUTO_INCREMENT = 1");
         mysqli_query($conn, "DELETE From cart");
+        echo "<script>alert('Thank You Order Completed.')</script>";
         echo "<script>window.location = './index.php';</script>";
       }
     };
