@@ -17,6 +17,9 @@
   <?php include './Components/Header.php';
   include 'Config.php';
   $select = mysqli_query($conn, "SELECT * FROM ordertbl ");
+if (!$select) {
+    die("Error: " . mysqli_error($conn));
+}
 
  
   ?>

@@ -34,16 +34,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?><?php
 
 if(isset($_POST['update_product'])){
-  $product_id=$_POST['product_id'];
-  $product_name = $_POST['product_name'];
-  $product_price = $_POST['product_price'];
-  $product_des = $_POST['product_des'];
-  $product_cat= $_POST['product_cat'];
-  $product_image1 = $_FILES['product_image1']['name'];
-  $product_image_tmp_name1 = $_FILES['product_image1']['tmp_name'];
-  $product_image_folder1 = 'uploaded_img/'.$product_image1;
-
-
+  $product_id = htmlspecialchars($_POST['product_id']);
+  $product_name = htmlspecialchars($_POST['product_name']);
+  $product_price = htmlspecialchars($_POST['product_price']);
+  $product_des = htmlspecialchars($_POST['product_des']);
+  $product_cat = htmlspecialchars($_POST['product_cat']);
+  $product_image1 = htmlspecialchars($_FILES['product_image1']['name']);
+  $product_image_tmp_name1 = htmlspecialchars($_FILES['product_image1']['tmp_name']);
+  $product_image_folder1 = 'uploaded_img/' . htmlspecialchars($product_image1);
+  
    if (empty($product_name) || empty($product_price) || empty($product_des) || empty($product_cat) || empty($product_image1)) {
     $message[] = 'please fill out all';
   } else {
