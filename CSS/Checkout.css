@@ -31,6 +31,19 @@ html::-webkit-scrollbar-thumb {
     background: var(--main-color);
 }
 
+.message {
+    /* display: block; */
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    background: rgb(6, 85, 255);
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
 .wrapper {
     position: relative;
     max-width: 430px;

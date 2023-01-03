@@ -28,7 +28,7 @@
                       echo ' <img src="./uploaded_img/' . $row['IMG'] . '" class="card-img-top" alt="...">';
                       echo ' <div class="card-body">';
                       echo ' <h5 class="card-title">' . $row['NAME'] . '</h5>';
-                      echo '<p class="card-text">' . $row['NAME'] . ' </p>';
+                      echo '<p class="card-text">' . implode(' ', array_slice(explode(' ', $row['DES']), 0, 9)) . ' </p>';
                       echo '<p class="card-text">for ' . $row['PRICE'] . '/= </p>';
                       echo ' <button type="button" class="btn btn-success abtbtn" onclick="loadProduct(' . $row['ID'] . ')" style="background-color:#54A232;border: none; width: 120px;font-family: "Chivo Mono", monospace; float: left; ">Purchase</button>';
                       echo ' </div>';

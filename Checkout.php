@@ -38,10 +38,10 @@
         <input type="text" placeholder="Enter your Address" name="address" required>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Enter your Postal Code" name="postalcode" required>
+        <input type="no" placeholder="Enter your Postal Code" name="postalcode" required>
       </div>
       <div class="input-box">
-        <input type="password" placeholder="Enter your Contact no" name="no" required>
+        <input type="no" placeholder="Enter your Contact no" name="no" required>
       </div>
       
       <div class="policy">
@@ -55,4 +55,18 @@
     </form>
   </div>
 </body>
+<script>
+function checkAcceptance() {
+  var checkbox = document.querySelector('input[type=checkbox]');
+  var button = document.querySelector('input[type=submit]');
+  if (!checkbox.checked) {
+    alert('You must accept the terms and conditions before proceeding.');
+  }
+}
+
+document.querySelector('input[type=submit]').addEventListener('click', checkAcceptance);
+</script>
+
+
+
 </html>
