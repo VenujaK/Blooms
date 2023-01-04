@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
           <label>Email Address</label>
         </div>
         <div class="field">
-          <input type="password" name="password" required>
+          <input type="password" name="password" placeholder="Password" required>
           <label>Password</label>
         </div>
         <div class="field">
